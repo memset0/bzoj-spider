@@ -4,12 +4,14 @@
 
 **跪求大佬纠正代码内英语语法错误**
 
-# 环境
+## Installation
 
-开发环境: Python 3.7（理论兼容 Python 3）
+> supports python3.x
 
-第三方依赖: Requests
+```bash
+pip install -r requirements.txt
+```
 
-# License
+## License
 
-MIT License
+[MIT](LICENSE) License
