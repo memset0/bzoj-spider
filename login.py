@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 import requests
 
 # 配置登陆地址
@@ -17,7 +19,7 @@ print('OK, your user name is "{username}" and the password is "{password}".'.for
 try:
     data = { 'user_id': username, 'password': password }
     request = requests.Session()
-    # ↓ 伪造 Header ，否则很想了解一下 TMD 为什么总是 404
+    # ↓ 伪造 Header ，否则你要会很想了解一下 TMD 为什么总是 404
     request.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3395.99 Safari/537.36'})
     ret = request.post(url, data = data)
     # ↓ 判断是否成功登录
