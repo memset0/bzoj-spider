@@ -18,10 +18,10 @@ print('OK, your user name is "{username}" and the password is "{password}".'.for
 # 尝试登陆并保存 Cookie
 try:
     data = { 'user_id': username, 'password': password }
-    request = requests.Session()
+    rq = requests.Session()
     # ↓ 伪造 Header ，否则你要会很想了解一下 TMD 为什么总是 404
-    request.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3395.99 Safari/537.36'})
-    ret = request.post(url, data = data)
+    rq.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3395.99 Safari/537.36'})
+    ret = rq.post(url, data = data)
     # ↓ 判断是否成功登录
     if ('history.go(-2);' in ret.text):
         # ↓ 利用人类智慧获取 cookie
