@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-# -*- coding: utf-8 -*-
 import requests
 
 # 配置登陆地址
@@ -24,6 +22,7 @@ try:
     ret = request.post(url, data = data)
     # ↓ 判断是否成功登录
     if ('history.go(-2);' in ret.text):
+        # ↓ 利用人类智慧获取 cookie
         cookie = str(ret.cookies)[37:-22]
         with open('cookie.txt', 'w+') as file:
             file.write(cookie)
