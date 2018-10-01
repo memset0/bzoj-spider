@@ -7,6 +7,7 @@
 ## 环境需求 / Installation
 
 > 支持 Python 3.x 版本
+> 
 > supports python3.x
 
 ```bash
